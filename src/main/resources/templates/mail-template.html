@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p style="color: blue; font-weight: bold" th:text="'Hi ' + ${name} + ','"></p>
+<p th:text="${email_message}"></p>
+
+<table border="0">
+    <tr>
+        <th th:width="'15px'"></th>
+        <th th:width="'55px'"></th>
+        <th th:width="'35px'"></th>
+        <th th:width="'55px'"></th>
+        <th th:width="'55px'"></th>
+    </tr>
+
+    <tr th:each="word : ${words}">
+        <td>-</td>
+        <td style="color: red; font-weight: bold" th:utext="${word.getWord()} + ' '"></td>
+        <td th:utext="${'(' + word.getTypeOfWord() + ')'} + ' '"></td>
+        <td th:utext="${word.getTranscription()} + ':  '"></td>
+        <td th:utext="${word.getMeaning()}"></td>
+    </tr>
+
+</table>
+
+<p>Nothing impossible!</p>
+</body>
+</html>

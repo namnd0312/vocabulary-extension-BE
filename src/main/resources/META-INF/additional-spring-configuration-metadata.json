@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "spring.jpa.hibernate",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.dialect."
+    },
+    {
+      "name": "api.coreai.header.userID",
+      "type": "java.lang.String",
+      "description": "Description for api.coreai.header.userID."
+    }
+  ] }
