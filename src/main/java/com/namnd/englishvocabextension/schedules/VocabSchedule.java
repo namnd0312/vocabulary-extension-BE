@@ -23,7 +23,7 @@ public class VocabSchedule {
     @Autowired
     private VocabularyService vocabularyService;
 
-    @Scheduled(cron = "0 30 19 * * ?")
+    @Scheduled(cron = "0 50 14 * * ?")
     private void startSchedulingSendVocabsByEmail(){
         this.vocabularyService.getAllByCreateTimeAndProcess(EProcess.TWO_MONTH);
         this.vocabularyService.getAllByCreateTimeAndProcess(EProcess.A_MONTH);
